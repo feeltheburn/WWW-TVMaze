@@ -4,7 +4,7 @@ WWW::TVMaze - Interface to TVMaze API
 
 # VERSION
 
-Version 0.05
+Version 0.07
 
 # SYNOPSIS
 
@@ -53,6 +53,20 @@ Returns all seasons of a show. Each season contains the number; the name (availa
         my $ep_list = $tv_maze->show_episode_list($show_id, $include_specials); # $include_specials can be 0 or 1 and is optional;
 
 Returns a complete list of episodes for a given show. by defauls specials are not included
+
+## show_alternate_lists
+        	
+        my $alternate_lists = $tv_maze->show_alternate_lists($show_id);
+
+Returns a list of alternate episode orders for a given show. 
+Alternate lists have their own unique id numbers to identify them which is needed to get the episodes with show_alternate_episodes.
+
+## show_alternate_episodes
+            
+       my $alternate_episodes = $tv_maze->show_alternate_episodes($alternate_list_id);
+
+Returns all episode information for a specified alternate list given the unique alternate list ID, in the alternate list order.
+$alternate_list_ID is gotten via show_alternate_lists.
 
 ## show_cast
 
