@@ -12,3 +12,9 @@ Revision history for WWW-TVMaze
 
 0.05	2016/02/14
 		Allows show lookup by imdb id
+
+0.06	2016/02/14
+		(0.05 was released with 0.06 as our $VERSION number)
+		
+0.07	2022/04/13
+		Added show_alternate_episodes and show_alternate_lists
